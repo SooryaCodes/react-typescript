@@ -1,6 +1,7 @@
 
 import './App.css';
 import Button from './components/Button';
+import Container from './components/Container';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
 import Input from './components/Input';
@@ -26,7 +27,9 @@ function App() {
       {/* <Greet name='Soorya' isAuthenticated={true} /> */}
 
       {/* <Button handleClick={(event, id) => console.log(`Button clicked, id : ${id} `, event)} /> */}
-      <Input value="" handleChange={(event) => console.log(event.target.value)} />
+      {/* <Input value="" handleChange={(event) => console.log(event.target.value)} /> */}
+
+      <Container styles={{ border: "2px dashed #202020", padding: '2rem' }}/>
     </div>
   );
 }
