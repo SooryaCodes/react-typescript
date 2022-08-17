@@ -1,8 +1,7 @@
+import { Name } from "./Person.types"
+
 type Props = {
-    nameList: {
-        first_name: string,
-        last_name: string
-    }[]
+    nameList: Name[]
 }
 
 export default function PersonList({ nameList }: Props) {

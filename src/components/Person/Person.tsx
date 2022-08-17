@@ -1,8 +1,7 @@
+import { Name } from "./Person.types"
+
 type Props = {
-    name: {
-        first_name: string,
-        last_name: string
-    }
+    name: Name
 }
 
 export default function Person({ name }: Props) {
