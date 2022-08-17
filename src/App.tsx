@@ -1,7 +1,9 @@
 
 import './App.css';
+import Button from './components/Button';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
+import Input from './components/Input';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
@@ -21,7 +23,10 @@ function App() {
       {/* <Greet name='Soorya' msgCount={20} isAuthenticated={true} /> */}
       {/* <Status status='loading' /> */}
       {/* <Heading> <Oscar/> </Heading> */}
-      <Greet name='Soorya' isAuthenticated={true} />
+      {/* <Greet name='Soorya' isAuthenticated={true} /> */}
+
+      {/* <Button handleClick={(event, id) => console.log(`Button clicked, id : ${id} `, event)} /> */}
+      <Input value="" handleChange={(event) => console.log(event.target.value)} />
     </div>
   );
 }
