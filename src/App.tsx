@@ -15,6 +15,8 @@ import LoggedIn from "./components/state/LoggedIn";
 import Status from "./components/Status";
 import User from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
+import DomRef from "./components/ref/DomRef";
+import MutableRef from "./components/ref/MutableRef";
 
 function App() {
   const name = { first_name: "Soorya", last_name: "Krishna" };
@@ -45,9 +47,13 @@ function App() {
       {/* <ThemeContextProvider>
         <Box />
       </ThemeContextProvider> */}
-      <UserContextProvider>
+
+      {/* <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
