@@ -20,6 +20,7 @@ import MutableRef from "./components/ref/MutableRef";
 import Counter2 from './components/class/Counter'
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
 
 function App() {
   const name = { first_name: "Soorya", last_name: "Krishna" };
@@ -61,6 +62,10 @@ function App() {
       {/* <Counter2 message="Counter" /> */}
 
       {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      <List onClick={(item) => { alert(item) }} title="Avengers: The Big Three" items={['Thor', 'Iron Man', 'Captain America']} />
+      <List onClick={(item) => { alert(item) }} title="List of numbers" items={[1, 2, 3]} />
+
     </div>
   );
 }

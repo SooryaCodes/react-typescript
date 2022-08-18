@@ -1,0 +1,10 @@
+.list_wrapper {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid;
+}
+
+.title {
+    font-weight: 700;
+    margin: 0
+}
