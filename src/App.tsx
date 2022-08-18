@@ -11,8 +11,10 @@ import Person from "./components/Person/Person";
 import PersonList from "./components/Person/PersonList";
 import Counter from "./components/state/Counter";
 import LoggedIn from "./components/state/LoggedIn";
-import User from "./components/state/User";
+// import User from "./components/state/User";
 import Status from "./components/Status";
+import User from "./components/context/User";
+import { UserContextProvider } from "./components/context/UserContext";
 
 function App() {
   const name = { first_name: "Soorya", last_name: "Krishna" };
@@ -40,9 +42,12 @@ function App() {
 
       {/* <Counter /> */}
 
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
