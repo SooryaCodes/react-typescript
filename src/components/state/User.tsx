@@ -8,7 +8,7 @@ type AuthUser = {
 };
 
 export default function User({}: Props) {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
   /**
    * Handle login function
@@ -16,21 +16,12 @@ export default function User({}: Props) {
   const handleLogin = () =>
     setUser({ name: "Soorya", email: "soorya@gmail.com" });
 
-  /**
-   * Handle logout function
-   */
-  const handleLogout = () => setUser(null);
   return (
     <div>
       <button onClick={handleLogin}>Login</button> &nbsp;
-      <button onClick={handleLogout}>Logout</button>
       <br />
       <span>
-        Welcome{" "}
-        {user
-          ? `${user?.name}, your email is ${user?.email}`
-          : "Guest, please login"}
-        .
+        Welcome {user.name}, your email is {user.email}.
       </span>
     </div>
   );
