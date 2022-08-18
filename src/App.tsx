@@ -8,6 +8,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person/Person";
 import PersonList from "./components/Person/PersonList";
 import LoggedIn from "./components/state/LoggedIn";
+import User from "./components/state/User";
 import Status from "./components/Status";
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
 
       {/* <Container styles={{ border: "2px dashed #202020", padding: '2rem' }}/> */}
 
-      <LoggedIn />
+      {/* <LoggedIn /> */}
+      <User />
     </div>
   );
 }
