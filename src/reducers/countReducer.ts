@@ -1,15 +1,16 @@
 import { CounterAction, CounterState } from "../components/state/Counter.types";
 
-export const countReducer = (
-  { count }: CounterState,
-  { type, payload }: CounterAction
-) => {
-  switch (type) {
+export const initialState = { count: 0 };
+
+export const countReducer = (state: CounterState, action: CounterAction) => {
+  switch (action.type) {
     case "INCREMENT":
-      return { count: count + payload };
+      return { count: state.count + action.payload };
     case "DECREMENT":
-      return { count: count - payload };
+      return { count: state.count - action.payload };
+    case "RESET":
+      return initialState;
     default:
-      return { count };
+      return state;
   }
 };

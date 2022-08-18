@@ -1,7 +1,5 @@
 import { useReducer } from "react";
-import { countReducer } from "../../reducers/countReducer";
-
-const initialState = { count: 0 };
+import { countReducer, initialState } from "../../reducers/countReducer";
 
 export default function Counter() {
   const [state, dispatch] = useReducer(countReducer, initialState);
@@ -14,8 +12,10 @@ export default function Counter() {
       </button>
       &nbsp;
       <button onClick={() => dispatch({ type: "DECREMENT", payload: 10 })}>
-        Decrement 10
+        Decrement 10 &nbsp;
       </button>
+      &nbsp;
+      <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
     </>
   );
 }
