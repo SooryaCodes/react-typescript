@@ -25,6 +25,7 @@ import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import CustomButton from "./components/html/Button";
 import CustomInput from "./components/html/Input";
+import Text from "./components/polymorphic/Text";
 
 function App() {
   const name = { first_name: "Soorya", last_name: "Krishna" };
@@ -61,10 +62,20 @@ function App() {
       <List onClick={(item) => { alert(item) }} title="List of numbers" items={[1, 2, 3]} /> */}
       {/* <RandomNumber value={20} isPositive /> */}
       {/* <Toast position="center-top" /> */}
-      <CustomInput onClick={(e) => console.log(e)} /> &nbsp;
+      {/* <CustomInput onClick={(e) => console.log(e)} /> &nbsp;
       <CustomButton variant="primary" onClick={() => alert("Button clicked")}>
         Submit
-      </CustomButton>
+      </CustomButton> */}
+
+      <Text as="h1" size="md" color="primary">
+        Heading
+      </Text>
+      <Text as="p" size="sm" color="secondary">
+        Description
+      </Text>
+      <Text as="label" size="md" color="secondary" htmlFor="email">
+        Email
+      </Text>
     </div>
   );
 }
