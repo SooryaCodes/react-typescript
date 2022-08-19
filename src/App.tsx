@@ -17,11 +17,12 @@ import User from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
-import Counter2 from './components/class/Counter'
+import Counter2 from "./components/class/Counter";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateLiterals/Toast";
 
 function App() {
   const name = { first_name: "Soorya", last_name: "Krishna" };
@@ -67,7 +68,9 @@ function App() {
       {/* <List onClick={(item) => { alert(item) }} title="Avengers: The Big Three" items={['Thor', 'Iron Man', 'Captain America']} />
       <List onClick={(item) => { alert(item) }} title="List of numbers" items={[1, 2, 3]} /> */}
 
-      <RandomNumber value={20} isPositive />
+      {/* <RandomNumber value={20} isPositive /> */}
+
+      <Toast position="center-top" />
     </div>
   );
 }
